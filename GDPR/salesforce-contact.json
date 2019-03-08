@@ -1,0 +1,43 @@
+{
+  "_id": "salesforce-contact",
+  "type": "pipe",
+  "source": {
+    "type": "embedded",
+    "entities": [{
+      "_id": "0",
+      "EmailAddress": "<INSERT YOUR EMAIL HERE>",
+      "SSN": 44434333333,
+      "Username": "MyUsername",
+      "phone_number": 2343462
+    }, {
+      "_id": "1",
+      "EmailAddress": "user@mail.com",
+      "SSN": 2222222222,
+      "Username": "Username1",
+      "phone_number": 77373563
+    }, {
+      "_id": "2",
+      "EmailAddress": "user2@mail.com",
+      "SSN": 1111111111,
+      "Username": "Username2",
+      "phone_number": 8633773773
+    }]
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "rdf:type",
+          ["ni", "salesforce", "lead"]
+        ]
+      ]
+    }
+  },
+  "pump": {
+    "cron_expression": "0 0 1 1 ?"
+  },
+  "metadata": {
+    "tags": ["lead", "embedded"]
+  }
+}
