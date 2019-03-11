@@ -4,23 +4,23 @@
   "source": {
     "type": "embedded",
     "entities": [{
-      "_id": "0",
-      "EmailAddress": "<INSERT YOUR EMAIL HERE>",
+      "_id": "123123",
+      "EmailAddress": "pal.a@sesam.io",
+      "Phone_number": "14483792",
       "SSN": 44434333333,
-      "Username": "MyUsername",
-      "phone_number": 2343462
+      "Username": "paland"
     }, {
-      "_id": "1",
-      "EmailAddress": "user@mail.com",
-      "SSN": 2222222222,
-      "Username": "Username1",
-      "phone_number": 77373563
+      "_id": "9879087",
+      "EmailAddress": "ravish.ranjan@bouvet.no",
+      "Phone_number": "29398319",
+      "SSN": 32222222,
+      "Username": "ravishran"
     }, {
-      "_id": "2",
-      "EmailAddress": "user2@mail.com",
+      "_id": "65746",
+      "EmailAddress": "simen.jorgensen@bouvet.no",
+      "Phone_number": "8633773773",
       "SSN": 1111111111,
-      "Username": "Username2",
-      "phone_number": 8633773773
+      "Username": "simenvj"
     }]
   },
   "transform": {
@@ -29,7 +29,7 @@
       "default": [
         ["copy", "*"],
         ["add", "rdf:type",
-          ["ni", "salesforce", "lead"]
+          ["ni", "salesforce", "contact"]
         ]
       ]
     }
